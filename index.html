@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IICP Professional Brochure</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -55,24 +56,37 @@
 
         .tabs {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 30px;
-            gap: 10px;
+            background: #3f51b5;
+            border-radius: 25px;
+            overflow: hidden;
+            flex-wrap: wrap;
+            gap: 0;
         }
 
         .tab {
-            background: #3f51b5;
-            padding: 12px 24px;
-            border-radius: 25px;
+            flex: 1;
+            padding: 15px 10px;
             cursor: pointer;
             font-size: 1rem;
             color: #fff;
-            transition: background 0.3s, transform 0.2s;
             text-align: center;
-            flex: 1;
-            min-width: 120px;
-            max-width: 200px;
+            transition: background 0.3s, transform 0.2s;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100px;
+        }
+
+        .tab:last-child {
+            border-right: none;
+        }
+
+        .tab i {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
         }
 
         .tab:hover {
@@ -242,8 +256,13 @@
 
             .tab {
                 font-size: 0.9rem;
-                padding: 10px 20px;
-                min-width: 100px;
+                padding: 10px;
+                min-width: 80px;
+            }
+
+            .tab i {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
             }
 
             .tab-content h2 {
@@ -266,12 +285,17 @@
         @media (max-width: 480px) {
             .tabs {
                 flex-direction: column;
-                align-items: center;
+                border-radius: 15px;
             }
 
             .tab {
-                width: 80%;
-                max-width: none;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 12px;
+            }
+
+            .tab:last-child {
+                border-bottom: none;
             }
 
             .tab-content {
@@ -293,16 +317,16 @@
         </div>
 
         <div class="tabs">
-            <div class="tab active" data-tab="overview">Overview</div>
-            <div class="tab" data-tab="about">About IICP</div>
-            <div class="tab" data-tab="leadership">Leadership</div>
-            <div class="tab" data-tab="services">Services</div>
-            <div class="tab" data-tab="support">Support Systems</div>
-            <div class="tab" data-tab="success">Success Stories</div>
-            <div class="tab" data-tab="placements">Placements</div>
-            <div class="tab" data-tab="journey">Student Journey</div>
-            <div class="tab" data-tab="achievements">Achievements</div>
-            <div class="tab" data-tab="future">Future Vision</div>
+            <div class="tab active" data-tab="overview"><i class="fas fa-home"></i> Overview</div>
+            <div class="tab" data-tab="about"><i class="fas fa-info-circle"></i> About IICP</div>
+            <div class="tab" data-tab="leadership"><i class="fas fa-user-tie"></i> Leadership</div>
+            <div class="tab" data-tab="services"><i class="fas fa-cogs"></i> Services</div>
+            <div class="tab" data-tab="support"><i class="fas fa-headset"></i> Support Systems</div>
+            <div class="tab" data-tab="success"><i class="fas fa-trophy"></i> Success Stories</div>
+            <div class="tab" data-tab="placements"><i class="fas fa-briefcase"></i> Placements</div>
+            <div class="tab" data-tab="journey"><i class="fas fa-route"></i> Student Journey</div>
+            <div class="tab" data-tab="achievements"><i class="fas fa-award"></i> Achievements</div>
+            <div class="tab" data-tab="future"><i class="fas fa-eye"></i> Future Vision</div>
         </div>
 
         <div class="tab-content active" id="overview">
@@ -462,7 +486,7 @@
                         label: 'Students Placed',
                         data: [2000, 2500, 3000, 3500],
                         backgroundColor: '#ffeb3b',
-                        borderColor: '#1a237e',
+                        borderColor: '#1 economies237e',
                         borderWidth: 2
                     }]
                 },
